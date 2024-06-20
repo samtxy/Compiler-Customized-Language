@@ -1,0 +1,405 @@
+	Rat21F -> <Opt Function Definitions>  #  <Opt Declaration List>  <Statement List>  #
+Keyword : 		function 
+	<Opt Function Definitions> -> <Function Definitions> 
+	<Function Definitions> -> <Function> | <Function> <Function Definitions>
+	<Function> -> function <Identifier> ( <Opt Parameter List> ) <Opt Declaration List> <Body>
+Identifier : 	linkedlist 
+Separator : 	( 
+Identifier : 	node 
+	<Opt Parameter List> ->  <Parameter List>
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Keyword : 		real 
+	<Qualifier> -> real
+Separator : 	, 
+Separator : 	, 
+Identifier : 	pointer 
+	<Opt Parameter List> ->  <Parameter List>
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Keyword : 		integer 
+	<Qualifier> -> integer
+Separator : 	, 
+Separator : 	, 
+Identifier : 	value 
+	<Opt Parameter List> ->  <Parameter List>
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Keyword : 		real 
+	<Qualifier> -> real
+Separator : 	) 
+Separator : 	{ 
+	<Opt Declaration List> ->  <Empty>
+	<Empty> -> e
+	<Body> -> {  < Statement List>  }
+Identifier : 	linear 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Integer : 	1011010 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		return 
+	<Statement> -> <Return>
+	Return -> return ; |  return <Expression> ;
+Identifier : 	linear 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		+ 
+	<Expression Prime> -> + <Term> <Expression Prime>
+Real : 	51.22 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		* 
+	<Term Prime> -> * <Term Prime>
+Real : 	2.123 
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Term Prime> -> e
+Operator : 		- 
+	<Expression Prime> -> - <Term> <Expression Prime>
+Identifier : 	node 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Expression Prime> -> e
+	<Statement List Prime> -> e
+Separator : 	} 
+Keyword : 		function 
+	<Function Definitions> -> <Function> | <Function> <Function Definitions>
+	<Function> -> function <Identifier> ( <Opt Parameter List> ) <Opt Declaration List> <Body>
+Identifier : 	dollar 
+Separator : 	( 
+Identifier : 	penny 
+	<Opt Parameter List> ->  <Parameter List>
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Keyword : 		integer 
+	<Qualifier> -> integer
+Separator : 	) 
+Separator : 	{ 
+	<Opt Declaration List> ->  <Empty>
+	<Empty> -> e
+	<Body> -> {  < Statement List>  }
+Identifier : 	cash 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Real : 	7.2221 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Identifier : 	change 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Identifier : 	cash 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		+ 
+	<Expression Prime> -> + <Term> <Expression Prime>
+Identifier : 	penny 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		+ 
+	<Expression Prime> -> + <Term> <Expression Prime>
+Real : 	30.21 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Expression Prime> -> e
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		return 
+	<Statement> -> <Return>
+	Return -> return ; |  return <Expression> ;
+Identifier : 	linkedlist 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	( 
+Identifier : 	node 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	, 
+Identifier : 	change 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	, 
+Identifier : 	cash 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	) 
+	<Statement List Prime> -> e
+Separator : 	} 
+Separator : 	# 
+	<Function Definitions> -> <Function> | <Function> <Function Definitions>
+Keyword : 		real 
+	<Opt Declaration List> -> <Declaration List>
+	<Declaration List> -> <Declaration> <Declaration List Prime>
+	<Declaration> -> <Qualifier> <identifier>
+	<Qualifier> -> real
+Identifier : 	j 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	, 
+Identifier : 	k 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	; 
+Identifier : 	k 
+	<Declaration List Prime> -> e
+Identifier : 	k 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Integer : 	200 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		while 
+	<Statement> -> <While>
+	<While> -> while (<Condition>) <Statement>
+Separator : 	( 
+Identifier : 	j 
+	<Condition> -> <Expression> <Relop> <Expression>
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Relop> -> ==
+Keyword : 		true 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	) 
+Separator : 	{ 
+	<Statement> -> <Compound>
+	<Compound> ->  { <Statement List> }
+Keyword : 		if 
+	<Statement> -> <If>
+	<If> -> if (<Condition>) <Statement> <IfPrime> endif
+Separator : 	( 
+Identifier : 	k 
+	<Condition> -> <Expression> <Relop> <Expression>
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Relop> -> <
+Integer : 	200 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	) 
+Separator : 	{ 
+	<Statement> -> <Compound>
+	<Compound> ->  { <Statement List> }
+Identifier : 	k 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Identifier : 	k 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		- 
+	<Expression Prime> -> - <Term> <Expression Prime>
+Integer : 	1 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Expression Prime> -> e
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		get 
+	<Statement> -> <Get>
+	<Get> -> get(<IDs>)
+Separator : 	( 
+Identifier : 	twoHundred 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	, 
+Identifier : 	times 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	) 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		if 
+	<Statement> -> <If>
+	<If> -> if (<Condition>) <Statement> <IfPrime> endif
+Separator : 	( 
+Identifier : 	k 
+	<Condition> -> <Expression> <Relop> <Expression>
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Relop> -> ==
+Integer : 	0 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	) 
+Separator : 	{ 
+	<Statement> -> <Compound>
+	<Compound> ->  { <Statement List> }
+Identifier : 	j 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Keyword : 		false 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		get 
+	<Statement> -> <Get>
+	<Get> -> get(<IDs>)
+Separator : 	( 
+Identifier : 	youAreDone 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	, 
+Identifier : 	congrats 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	, 
+Identifier : 	seeYa 
+	IDs -> <Identifier>  | <Identifier>, <IDs>
+Separator : 	) 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		if 
+	<Statement> -> <If>
+	<If> -> if (<Condition>) <Statement> <IfPrime> endif
+Separator : 	( 
+Identifier : 	j 
+	<Condition> -> <Expression> <Relop> <Expression>
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Relop> -> ==
+Keyword : 		false 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	) 
+Identifier : 	getOut 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Keyword : 		false 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	; 
+	<IfPrime> -> e
+Keyword : 		endif 
+	<Statement List Prime> -> e
+Separator : 	} 
+	<IfPrime> -> else  <Statement>
+Separator : 	{ 
+	<Statement> -> <Compound>
+	<Compound> ->  { <Statement List> }
+Identifier : 	k 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Identifier : 	k 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		- 
+	<Expression Prime> -> - <Term> <Expression Prime>
+Integer : 	5 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Expression Prime> -> e
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Keyword : 		put 
+	<Statement> -> <Put>
+	<Put> -> put (<Expression>)
+Separator : 	( 
+Integer : 	25 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		+ 
+	<Expression Prime> -> + <Term> <Expression Prime>
+Identifier : 	Jay 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Expression Prime> -> e
+Separator : 	) 
+Separator : 	; 
+	<Statement List Prime> -> e
+Separator : 	} 
+Keyword : 		endif 
+	<Statement List Prime> -> e
+Separator : 	} 
+	<IfPrime> -> else  <Statement>
+Separator : 	{ 
+	<Statement> -> <Compound>
+	<Compound> ->  { <Statement List> }
+Keyword : 		put 
+	<Statement> -> <Put>
+	<Put> -> put (<Expression>)
+Separator : 	( 
+Identifier : 	ASM 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		+ 
+	<Expression Prime> -> + <Term> <Expression Prime>
+Real : 	57.42 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Operator : 		+ 
+	<Expression Prime> -> + <Term> <Expression Prime>
+Integer : 	99 
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+	<Expression Prime> -> e
+Separator : 	) 
+Separator : 	; 
+	<Statement List Prime> -> <Statement List>
+Identifier : 	getOut 
+	<Statement> -> <Assign>
+	<Assign> -> <Identifier> = <Expression> ;
+Operator : 		= 
+Keyword : 		true 
+	<Expression> -> <Term> <Expression Prime>
+	<Term> -> <Factor> <Term Prime>
+	<Factor> -> - <Primary> | <Primary>
+	<Primary> -> <Identifier> | <Integer> | <Identifier> ( <IDs> ) | ( <Expression> ) | <Real> | true | false 
+Separator : 	; 
+	<Statement List Prime> -> e
+Separator : 	} 
+Keyword : 		endif 
+	<Statement List Prime> -> e
+Separator : 	} 
+	<Statement List Prime> -> e
+Separator : 	# 
